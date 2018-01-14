@@ -1,0 +1,57 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4e3827f31d93e365c3218d2234225dae",
+    "entities": [
+      {
+        "tableName": "Purchase",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`purchase_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `amount_cents` INTEGER NOT NULL, `date` INTEGER, `place` TEXT, `category` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "purchaseId",
+            "columnName": "purchase_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountCents",
+            "columnName": "amount_cents",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "place",
+            "columnName": "place",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "purchase_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"4e3827f31d93e365c3218d2234225dae\")"
+    ]
+  }
+}

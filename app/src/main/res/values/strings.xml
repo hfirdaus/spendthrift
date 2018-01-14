@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">spendthrifty</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_add_purchase">AddPurchaseActivity</string>
+    <string name="amount">Amount</string>
+    <string name="place">Place</string>
+    <string name="category">Category</string>
+    <string name="set_date">Date</string>
+</resources>
